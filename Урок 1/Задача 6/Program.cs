@@ -6,10 +6,12 @@
 // -3 -> нет
 // 7 -> нет
 
-string Odd(int arg1, int arg2)
+string Odd(int arg)
 {
-    if (arg1 %% arg2) == 0 return "Да"
-    else return "Нет";
+    if (arg % 2 == 0)
+        return "Да"; 
+    else 
+        return "Нет";
 }
 
 Console.WriteLine(Odd(4));
