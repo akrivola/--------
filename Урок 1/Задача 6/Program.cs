@@ -6,7 +6,7 @@
 // -3 -> нет
 // 7 -> нет
 
-string Odd(int arg)
+string Even(int arg)
 {
     if (arg % 2 == 0)
         return "Да"; 
@@ -14,6 +14,6 @@ string Odd(int arg)
         return "Нет";
 }
 
-Console.WriteLine(Odd(4));
-Console.WriteLine(Odd(-3));
-Console.WriteLine(Odd(7));
+Console.WriteLine(Even(4));
+Console.WriteLine(Even(-3));
+Console.WriteLine(Even(7));
