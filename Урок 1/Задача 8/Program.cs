@@ -4,6 +4,23 @@
 // 5 -> 2, 4
 // 8 -> 2, 4, 6, 8
 
-int[] Odd (int N){
-
+string Even(int N)
+{
+    string result = "";
+    int i = 1;
+    while(i <= N)
+    {
+        if (i % 2 == 0)
+        {
+            if (result == "") 
+                result += i;
+            else
+                result += ", " + i;
+        }
+        i++;
+    }
+    return result; 
 }
+
+Console.WriteLine(Even(5));
+Console.WriteLine(Even(8));
