@@ -9,18 +9,10 @@ Console.Write("Введите число # 1: ");
 int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите число # 2: ");
 int b = Convert.ToInt32(Console.ReadLine());
-
-if (a > b) 
-{
-    Console.WriteLine(a + " - большее число");
-    Console.WriteLine(b + " - меньшее число");
-}
-else if (b > a)
-{
-    Console.WriteLine(b + " - большее число");
-    Console.WriteLine(a + " - меньшее число");
-}
+if (a == b) Console.WriteLine("Оба числа равны!!!"); 
 else
 {
-    Console.WriteLine(a + " и " + b + " равны"); 
+    int max = a;
+    if (b > max) max = b;
+    Console.WriteLine($"max = {max}"); 
 }
