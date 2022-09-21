@@ -6,7 +6,7 @@
 32679 -> 6
 */
 
-string ThirdDigit(int Arg)
+void ThirdDigit(int Arg)
 {
     int result;
     int temp = Arg;
@@ -18,14 +18,15 @@ string ThirdDigit(int Arg)
     }
     if (NumberOfDigits < 3)
     {
-        return "третьей цифры нет";
+        Console.WriteLine("третьей цифры нет");
     }
     else
     {
         result = Arg % (10 ^ (NumberOfDigits - 3));
-        return result.ToString();
+        Console.WriteLine(result.ToString());
     }
+    return;
 }
-Console.WriteLine(ThirdDigit(645));
-Console.WriteLine(ThirdDigit(78));
-Console.WriteLine(ThirdDigit(32679));
+ThirdDigit(645);
+ThirdDigit(78);
+ThirdDigit(32679);
