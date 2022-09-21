@@ -11,5 +11,22 @@ int getRandomNumberFromRange(int minBorder, int MaxBorder)
     return result;
 }
 
-int randomNumber = getRandomNumberFromRange(10,99);
+int getmaxDigitFromNumber(int number)
+{
+    int maxDigit = 0;
+    while (number > 0)
+    {
+        int currentDigit = number % 10;
+        if(maxDigit < currentDigit)
+        {
+            maxDigit = currentDigit;
+        }
+        number = number / 10;
+    }
+    return maxDigit;
+}
+
+int randomNumber = getRandomNumberFromRange(10,9999);
 Console.WriteLine($"Случайное значение {randomNumber}");
+int maxDigit = getmaxDigitFromNumber(randomNumber);
+Console.WriteLine($"Для числа {randomNumber} большая цифра {maxDigit}");
