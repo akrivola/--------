@@ -1,22 +1,31 @@
 ﻿/*
 Задача 13: Напишите программу, которая выводит третью цифру 
 заданного числа или сообщает, что третьей цифры нет.
-
 645 -> 5
-
 78 -> третьей цифры нет
-
 32679 -> 6
 */
-char sThird(int intArg1)
+
+string ThirdDigit(int Arg)
 {
-    if (intArg1 < 100)
+    int result;
+    int temp = Arg;
+    int NumberOfDigits = 0;
+    while(temp > 0)
     {
-        Console.Write("третьей цифры нет");
-        return '\0';
+        temp = temp / 10;
+        NumberOfDigits++;
     }
-    return intArg1.ToString()[2];
+    if (NumberOfDigits < 3)
+    {
+        return "третьей цифры нет";
+    }
+    else
+    {
+        result = Arg % (10 ^ (NumberOfDigits - 3));
+        return result.ToString();
+    }
 }
-Console.WriteLine(sThird(645));
-Console.WriteLine(sThird(78));
-Console.WriteLine(sThird(32679));
+Console.WriteLine(ThirdDigit(645));
+Console.WriteLine(ThirdDigit(78));
+Console.WriteLine(ThirdDigit(32679));
