@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Урок 1/Задача 4/Задача 4.csproj",
+                "${workspaceFolder}/Урок 2/Задача 21/Задача 21.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Урок 1/Задача 4/Задача 4.csproj",
+                "${workspaceFolder}/Урок 2/Задача 21/Задача 21.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Урок 1/Задача 4/Задача 4.csproj"
+                "${workspaceFolder}/Урок 2/Задача 21/Задача 21.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
