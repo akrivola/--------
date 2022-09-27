@@ -1,10 +1,10 @@
 ﻿/*
-Задача 29: Напишите программу, которая задаёт массив из 8 элементов 
-и выводит их на экран.
+Задача 29: Напишите программу, в которой пользователь задает
+длину массива, элементы которого задаются в диапазоне [1,99] 
+и выводит на экран.
 
-1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-
-6, 1, 33 -> [6, 1, 33]
+5 -> [1, 2, 5, 7, 19]
+3 -> [6, 1, 33]
 */
 void PrintArray(int[] array)
 {
@@ -12,12 +12,25 @@ void PrintArray(int[] array)
     for (int i = 0; i < array.Length; i++)
     {
         Console.Write(array[i]);
-        if (i != array.Length - 1) Console.Write(", ");
+        if (i != array.Length - 1) 
+        {
+            Console.Write(", ");
+        }
     }
     Console.WriteLine("]");
     return;
 }
-int[] array1 = {1, 2, 5, 7, 19};
-PrintArray(array1);
-int[] array2 = {6, 1, 33};
-PrintArray(array2);
+
+int[] populateRandom(int length)
+{
+    int[] result = new int[length];
+    for (int i=0; i < length; i++)
+    {
+        result[i] = new Random().Next(1, 100);
+    }
+    return result;
+}
+
+Console.Write("Введите длину массива: ");
+int arrayLength = Convert.ToInt32(Console.ReadLine());
+PrintArray(populateRandom(arrayLength));

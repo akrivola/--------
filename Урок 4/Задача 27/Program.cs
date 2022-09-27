@@ -14,10 +14,6 @@ int sum(int Arg)
         result = result + (Arg % 10);
         Arg = Arg / 10;
     }
-    // for (int count = 1; count <= NumberOfDigits; count++)
-    // {
-    //     result = result + Console.WriteLine("третьей цифры нет");
-    // }
     return result;
 }
 Console.WriteLine(sum(452));
