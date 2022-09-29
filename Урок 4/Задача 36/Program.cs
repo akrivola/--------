@@ -46,4 +46,4 @@ int sumOddPlaces(int[] array)
 Console.Write("Введите длину массива: ");
 int arrayLength = Convert.ToInt32(Console.ReadLine());
 int[] array = populateRandom(arrayLength);
-Console.WriteLine($"Количество четных чисел в массиве {outArray(array)} -> {sumOddPlaces(array)}");
+Console.WriteLine($"{outArray(array)} -> {sumOddPlaces(array)}");
