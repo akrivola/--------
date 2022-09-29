@@ -29,14 +29,26 @@ string outArray(int[] array)
     return result;
 }
 
+int max(int[] array)
+{
+    int result = array[0];
+    for (int i = 1; i < array.Length; i++)
+    {
+        if (array[i] > result)
+        {
+            result = array[i];
+        }
+    }
+    return result;
+}
 int min(int[] array)
 {
-    int result = 0;
-    for (int i = 0; i < array.Length; i++)
+    int result = array[0];
+    for (int i = 1; i < array.Length; i++)
     {
-        if (i % 2 != 0)
+        if (array[i] < result)
         {
-            result += array[i];
+            result = array[i];
         }
     }
     return result;
@@ -45,4 +57,4 @@ int min(int[] array)
 Console.Write("Введите длину массива: ");
 int arrayLength = Convert.ToInt32(Console.ReadLine());
 int[] array = populateRandom(arrayLength);
-Console.WriteLine($"Количество четных чисел в массиве {outArray(array)} -> {sumOddPlaces(array)}");
+Console.WriteLine($"{outArray(array)} -> {max(array) - min(array)}");
