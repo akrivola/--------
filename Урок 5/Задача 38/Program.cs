@@ -4,12 +4,13 @@
 
 [3 7 22 2 78] -> 76
 */
-int[] populateRandom(int length)
+double[] populateRandom(int length)
 {
-    int[] result = new int[length];
+    double[] result = new double[length];
     for (int i=0; i < length; i++)
     {
-        result[i] = new Random().Next(0, 100);
+        Random temp = new Random();
+        result[i] = new (temp.NextDouble);// * Double.MaxValue * 2) - Double.MinValue;
     }
     return result;
 }
@@ -56,5 +57,5 @@ int min(int[] array)
 
 Console.Write("Введите длину массива: ");
 int arrayLength = Convert.ToInt32(Console.ReadLine());
-int[] array = populateRandom(arrayLength);
+double[] array = populateRandom(arrayLength);
 Console.WriteLine($"{outArray(array)} -> {max(array) - min(array)}");
