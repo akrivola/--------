@@ -28,9 +28,44 @@ string outArray(int[] array)
     return result;
 }
 
+int sumArray(int[] array)
+{
+    int result = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        result += array[i];
+    }
+    return result;    
+}
+
+// поиск хотя бы 1 подмножества, сумма цифр которого равна value
+int[] findSubset(int[] array, int value);
+{
+    int n = array.Length; // n - размерность исходного множества
+    if sumArray(array) == value
+    {
+        // нашли
+        return outArray;
+    }
+    else
+    {
+        if (n == 1)
+        {
+            // не нашли
+        }
+    }
+    for (int i = 0; i < n; i++)
+    {
+
+     
+    }
+}
+   
 
 // заполняем массив размером 1..10 числами в диапазоне -9..9
-Random rnd = new Random();
-int size = rnd.Next(1, 11);
-int[] array = populateRandom(size);
-Console.WriteLine($"{outArray(array)}");
+int[] array = populateRandom(new Random().Next(1, 11));
+// задаем случайным образом в диапазоне -9..9 число, которому будет равна
+// сумма искомого подмножества
+int value = new Random().Next(-9, 10);
+
+Console.WriteLine($"{outArray(array)} -> {sumArray(array)}");
