@@ -15,16 +15,24 @@ int[] populateRandom(int length)
 
 string outArray(int[] array)
 {
-    string result = "[";
-    for (int i = 0; i < array.Length; i++)
+    string result;
+    if (array == null)
     {
-        result += array[i];
-        if (i != array.Length - 1) 
-        {
-            result += ", ";
-        }
+       result = "не найдено"; 
     }
-    result += "]";
+    else
+    {
+        result = "[";
+        for (int i = 0; i < array.Length; i++)
+        {
+            result += array[i];
+            if (i != array.Length - 1) 
+            {
+                result += ", ";
+            }
+        }
+        result += "]";
+    }
     return result;
 }
 
@@ -79,12 +87,15 @@ int[] findSubset(int[] array, int value)
     }
 }
    
+// тестируем 10 раз
+for (int i = 0; i < 10; i++)
+{
+    // заполняем массив размером 1..10 числами в диапазоне -9..9
+    int[] array = populateRandom(new Random().Next(1, 11));
 
-// заполняем массив размером 1..10 числами в диапазоне -9..9
-int[] array = populateRandom(new Random().Next(1, 11));
-// задаем случайным образом в диапазоне -9..9 число, которому будет равна
-// сумма искомого подмножества
-int value = new Random().Next(-9, 10);
+    // задаем случайным образом в диапазоне -9..9 число, которому будет равна
+    // сумма искомого подмножества
+    int value = new Random().Next(-9, 10);
 
-
-Console.WriteLine($"в подмножестве {outArray(array)} ищем подмножество, сумма чисел в котором равна {value} -> {findSubset(array, value)}");
+    Console.WriteLine($"в подмножестве {outArray(array)} ищем подмножество, сумма чисел в котором равна {value} -> {outArray(findSubset(array, value))}");
+}

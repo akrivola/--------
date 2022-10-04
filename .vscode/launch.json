@@ -1,6 +1,6 @@
 {
-    "version": "0.2.0",
     "configurations": [
+        
         {
             // Use IntelliSense to find out which attributes exist for C# debugging
             // Use hover for the description of the existing attributes
@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Урок 2/Задача 21/bin/Debug/net6.0/Задача 21.dll",
+            "program": "${workspaceFolder}/Урок 6/Задача (сложная не на оценку)/bin/Debug/net6.0/Задача (сложная не на оценку).dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Урок 2/Задача 21",
+            "cwd": "${workspaceFolder}/Урок 6/Задача (сложная не на оценку)",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
@@ -22,5 +22,6 @@
             "type": "coreclr",
             "request": "attach"
         }
+
     ]
 }
