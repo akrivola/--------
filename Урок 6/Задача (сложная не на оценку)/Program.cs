@@ -39,25 +39,43 @@ int sumArray(int[] array)
 }
 
 // поиск хотя бы 1 подмножества, сумма цифр которого равна value
-int[] findSubset(int[] array, int value);
+int[] findSubset(int[] array, int value)
 {
     int n = array.Length; // n - размерность исходного множества
-    if sumArray(array) == value
+    if (sumArray(array) == value)
     {
         // нашли
-        return outArray;
+        return array;
     }
     else
     {
         if (n == 1)
         {
             // не нашли
+            return null;
         }
-    }
-    for (int i = 0; i < n; i++)
-    {
-
-     
+        else
+        {
+            for (int i = 0; i < n; i++)
+            {
+                int[] temp = new int[n - 1];
+                int k = 0;
+                for (int j = 0; j < n ; j++)
+                {
+                    if (j != i)
+                    {
+                        temp[k] = array[j];
+                        k++;
+                    }
+                }
+                int[] test = findSubset(temp, value);
+                if (test != null)
+                {
+                    return test;
+                }
+            }
+            return null;
+        }     
     }
 }
    
@@ -68,4 +86,5 @@ int[] array = populateRandom(new Random().Next(1, 11));
 // сумма искомого подмножества
 int value = new Random().Next(-9, 10);
 
-Console.WriteLine($"{outArray(array)} -> {sumArray(array)}");
+
+Console.WriteLine($"в подмножестве {outArray(array)} ищем подмножество, сумма чисел в котором равна {value} -> {findSubset(array, value)}");
