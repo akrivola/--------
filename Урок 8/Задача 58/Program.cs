@@ -7,3 +7,14 @@
 18 20
 15 18
 */
+
+int[,] multiplication(int[,] array1, int[,] array2)
+{
+    for (int i = 0; i < length; i++)
+    {
+        for (int j = 0; j < length; j++)
+        {
+            j
+        }
+    }
+}
