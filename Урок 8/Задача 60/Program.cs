@@ -7,3 +7,27 @@
 27(0,0,1) 90(0,1,1)
 26(1,0,1) 55(1,1,1)
 */
+
+int [,,] populateArray3D ()
+{
+    int [,,] result = new int [2, 2, 2];
+    int [] stack = new int [8];
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            for (int k = 0; k < 2; k++)
+            {
+                while ()    
+            }
+        }
+    }
+    return result;
+}
+
+void printArray(int[,,] array)
+{
+
+}
+
+printArray(populateArray3D());
