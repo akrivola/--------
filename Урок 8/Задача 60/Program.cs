@@ -12,22 +12,48 @@ int [,,] populateArray3D ()
 {
     int [,,] result = new int [2, 2, 2];
     int [] stack = new int [8];
+    int newItem;
+
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 2; j++)
         {
             for (int k = 0; k < 2; k++)
             {
-                while ()    
+                do
+                {
+                    newItem = new Random().Next(10, 100);
+                } while (isContained(newItem));
+                stack[i * 4 + j * 2 + k] = newItem;
+                result[i, j, k] = newItem;
             }
         }
     }
     return result;
+
+    bool isContained(int newItem)
+    {
+        bool result = false;
+        for (int i = 0; i < stack.Length; i++)
+            if(newItem == stack[i])
+                result = true;                        
+        return result;
+    }
 }
 
 void printArray(int[,,] array)
 {
-
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write($"{array[i, j, k]}({i},{j},{k}) ");
+            }
+            Console.WriteLine();
+        }
+    }
 }
 
 printArray(populateArray3D());
