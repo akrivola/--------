@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Урок 6/Задача (сложная не на оценку)/Задача (сложная не на оценку).csproj",
+                "${workspaceFolder}/Урок 8/Задача 62/Задача 62.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Урок 6/Задача (сложная не на оценку)/Задача (сложная не на оценку).csproj",
+                "${workspaceFolder}/Урок 8/Задача 62/Задача 62.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Урок 6/Задача (сложная не на оценку)/Задача (сложная не на оценку).csproj"
+                "${workspaceFolder}/Урок 8/Задача 62/Задача 62.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
