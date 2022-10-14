@@ -21,4 +21,4 @@ Console.Write("M = ");
 int M = Convert.ToInt32(Console.ReadLine());
 Console.Write("N = ");
 int N = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"M = {M}; N = {N} -> - > {sumNatural(M, N)}");
+Console.WriteLine($"M = {M}; N = {N} - > {sumNatural(M, N)}");
